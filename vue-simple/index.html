@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue Hello World</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+
+    <div id="app-2">
+      <span v-bind:title="message">
+        Hover over me for several seconds.
+      </span>
+    </div>
+
+    <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+      message: "A minified version of Vue implementation!"
+      }
+    });
+
+    var app2 = new Vue({
+      el: "#app-2",
+      data: {
+        message: "Page loaded on " + new Date()
+      }
+    })
+
+    </script>
+  </body>
+</html>
